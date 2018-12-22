@@ -1,0 +1,422 @@
+---------------------------------------------------------------
+[ 2018-12-20T17:17:25+08:00 ] 127.0.0.1 POST cartool.com/index.php/admin/index/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `tb_admin`  SET `logintime`=1545297445,`token`='83315d71-9a6d-4849-a8bb-f0782d6a6d7c',`updatetime`=1545297445  WHERE  `id` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin_log` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] INSERT INTO `tb_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"__token__\":\"97f4ad71ff8cb659b2eac7bf53af3295\",\"username\":\"admin\",\"captcha\":\"pbi4\",\"keeplogin\":\"1\"}' , '/index.php/admin/index/login' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36' , '127.0.0.1' , 1545297445) [ RunTime:0.007001s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:26+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:27+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:39+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/general/config?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_config` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'general/config' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:40+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/general/attachment?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'general/attachment' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:41+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/general/attachment/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1545297461016
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_attachment` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_attachment` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_attachment` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:41+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/general/profile?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:42+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/general/profile/index?sort=id&order=desc&offset=0&limit=10&_=1545297461737
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin_log` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:49+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/general/attachment/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1545297461017
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_attachment` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_attachment` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_attachment` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:49+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/general/profile/index?sort=id&order=desc&offset=0&limit=10&_=1545297461738
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin_log` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:50+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/category?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_category` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'category' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:51+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/category/index?sort=weigh&order=desc&_=1545297470737
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_category` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:52+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'auth/admin' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:52+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1545297472585
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `uid`,`group_id` FROM `tb_auth_group_access` WHERE  `group_id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_admin` WHERE  `id` IN (1) ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`nickname`,`avatar`,`email`,`loginfailure`,`logintime`,`createtime`,`updatetime`,`status` FROM `tb_admin` WHERE  `id` IN (1) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:53+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/adminlog?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'auth/adminlog' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:54+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/adminlog/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1545297473653
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_admin_log` WHERE  `admin_id` IN (1) ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_admin_log` WHERE  `admin_id` IN (1) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:54+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/group?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'auth/group' LIMIT 1 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:55+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/group/index?sort=id&order=desc&_=1545297474983
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,5,4) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:56+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/rule?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` ORDER BY `weigh` DESC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `tb_auth_rule` WHERE  `name` = 'auth/rule' LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:57+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/rule/index?sort=weigh&order=desc&_=1545297476278
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` ORDER BY `weigh` DESC [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:17:57+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1545297472586
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `uid`,`group_id` FROM `tb_auth_group_access` WHERE  `group_id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_admin` WHERE  `id` IN (1) ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`nickname`,`avatar`,`email`,`loginfailure`,`logintime`,`createtime`,`updatetime`,`status` FROM `tb_admin` WHERE  `id` IN (1) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:18:45+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1545297472587
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `uid`,`group_id` FROM `tb_auth_group_access` WHERE  `group_id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_admin` WHERE  `id` IN (1) ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`nickname`,`avatar`,`email`,`loginfailure`,`logintime`,`createtime`,`updatetime`,`status` FROM `tb_admin` WHERE  `id` IN (1) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:18:49+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:19:44+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1545297472588
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `uid`,`group_id` FROM `tb_auth_group_access` WHERE  `group_id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_admin` WHERE  `id` IN (1) ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`nickname`,`avatar`,`email`,`loginfailure`,`logintime`,`createtime`,`updatetime`,`status` FROM `tb_admin` WHERE  `id` IN (1) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:19:46+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:20:12+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:20:55+08:00 ] 127.0.0.1 POST cartool.com/index.php/admin/auth/admin/add?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` WHERE  `username` = 'test' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` WHERE  `email` = '1473817527@qq.com' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `tb_admin` (`username` , `email` , `nickname` , `password` , `status` , `salt` , `avatar` , `createtime` , `updatetime`) VALUES ('test' , '1473817527@qq.com' , '呵呵' , 'f6e0d97d7134b82f78f27789896a7b1a' , 'normal' , 'JiyaPd' , '/assets/img/avatar.png' , 1545297655 , 1545297655) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `tb_auth_group_access` (`uid` , `group_id`) VALUES (2 , 2) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `tb_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('权限管理 管理员管理 添加' , '{\"dialog\":\"1\",\"group\":[\"2\"],\"row\":{\"username\":\"test\",\"email\":\"1473817527@qq.com\",\"nickname\":\"\\u5475\\u5475\",\"password\":\"123456\",\"status\":\"normal\"}}' , '/index.php/admin/auth/admin/add?dialog=1' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36' , '127.0.0.1' , 1545297655) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:20:55+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1545297472589
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `uid`,`group_id` FROM `tb_auth_group_access` WHERE  `group_id` IN (1,2,3,4,5) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_admin` WHERE  `id` IN (1,2) ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`nickname`,`avatar`,`email`,`loginfailure`,`logintime`,`createtime`,`updatetime`,`status` FROM `tb_admin` WHERE  `id` IN (1,2) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:20:59+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin/edit/ids/2?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_admin` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='2' and ag.status='normal' ) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:21:04+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/category/index?sort=weigh&order=desc&_=1545297470738
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_category` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:21:07+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/category/edit/ids/7?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_category` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_category` ORDER BY `weigh` DESC,`id` DESC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_category` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:21:16+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/admin/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1545297472590
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `uid`,`group_id` FROM `tb_auth_group_access` WHERE  `group_id` IN (1,2,3,4,5) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_admin` WHERE  `id` IN (1,2) ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`nickname`,`avatar`,`email`,`loginfailure`,`logintime`,`createtime`,`updatetime`,`status` FROM `tb_admin` WHERE  `id` IN (1,2) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:21:17+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/adminlog/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1545297473654
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `tb_admin` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tb_admin_log` WHERE  `admin_id` IN (1,2) ORDER BY `id` DESC LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_admin_log` WHERE  `admin_id` IN (1,2) ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:21:19+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/group/index?sort=id&order=desc&_=1545297474984
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,5,4) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:21:22+08:00 ] 127.0.0.1 GET cartool.com/index.php/admin/auth/group/edit/ids/2?dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `tb_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-12-20T17:21:23+08:00 ] 127.0.0.1 POST cartool.com/index.php/admin/auth/group/roletree
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;dbname=cartool;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group_access` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `tb_auth_group_access` `aga` LEFT JOIN `tb_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_group` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `status` = 'normal' [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` IN (1,2,3,4,5) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_group` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_auth_rule` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `tb_auth_rule` ORDER BY `weigh` DESC [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tb_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `tb_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"id\":\"2\",\"pid\":\"1\"}' , '/index.php/admin/auth/group/roletree' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36' , '127.0.0.1' , 1545297683) [ RunTime:0.001000s ]
